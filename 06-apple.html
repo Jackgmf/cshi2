@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+        *{margin:0;padding:0;}
+        ul{list-style:none;}
+        a{text-decoration:none;}
+        img{display:block;}
+        .auto{width:1300px;margin:0 auto;
+          border:0px solid red;}
+        .header{
+        	height: 50px;
+        	background:#606060;
+        }
+        .header .logo{float:left;
+            margin:13px 10px 0 19%;
+
+        }
+        .header .nav-box{border:0px solid orange;
+        	float:left;line-height:50px;
+        	font-size:16px;
+        	font-family:"微软雅黑";
+        	position:relative;
+        	
+          }
+        .header .nav-box a{padding:0 20px;color:white;font-size:20px;}
+        .header .nav-box a:hover{color:black;}
+
+        .header .nav-box ul{
+        	background:#ccc;
+        	position:absolute;
+        	top:50px;left:0;
+        	display: none;
+        	z-index: 11;
+        }
+        /* 鼠标经过一级标题，二级导航显示出来 */
+        /* .nav-box>a:hover+ul{display:block;} 
+          有bug选不中二级导航*/
+        .nav-box:hover ul{display:block;}
+ 
+        .banner{border:0px solid red;
+        	width:1300px;margin:0 auto;
+        	position:relative;z-index:10;
+        }
+        .banner .btns{
+        	display: block;
+        	/* background: #999; */
+        	width: 40px;height: 40px;
+        	font-size: 30px;font-weight: bold;
+        	text-align: center;line-height: 40px;
+        	position:absolute;
+        	top:40%;/*margin-left:-20px;margin-top:-20px;*/
+
+        }
+        .banner .left-btn{/*float:left;position:relative;top:-350px; */ left:0;}
+        .banner .right-btn{/*float:right;position:relative;top:-350px;right:10px; */right:10px;}
+ /* 定位在底部*/
+        .points span{
+        	display:inline-block;width:12px;height: 12px;background:black;
+        	margin:0 5px;
+        	/* position:relative;top:-20px;left:50%; */
+        }
+        .points{border:0px solid red;
+        	position:absolute;
+        	bottom:10px;
+        	left:50%;margin-left:-44px;
+         }
+/* 插入圆形图片 */
+        .a1{border:0px solid red;
+            width:1300px;margin:0 auto;
+        }
+         .a3{border:0px solid orange;
+            position:relative;width:250px;
+            text-align:center;margin-bottom:90px;
+            
+        }
+        .a3 img{margin:0 auto;}
+        .b1{margin-left:13%;margin-top:8%}
+        .b2{margin-left:40%;margin-top:-33%;}
+        .b3{margin-left:66%;margin-top:-33%;}
+        .a3 h3{color:#551A8B;
+            font-family:"微软雅黑";
+            font-weight:bold;
+        }
+        .a3 span{font-family:"微软雅黑";}
+
+
+/* 图片的切换 */
+         .left{float:left;}
+         .right{float:right;}
+        .img-box{
+        	border:0px solid blue;
+        	position:relative;
+            
+        }
+        .img-box:first-child{margin-left:150px;}
+
+        .img-box img:last-child{position:absolute;
+          left:0;top:0;display:none;}
+         .img-box:hover img:last-child{display:block;}
+         .img-box:nth-child(4){margin-top:-84px;
+            margin-left:150px;}
+/* 下边文字 */
+      .a5{border:0px solid red;width:1100px;
+        margin:0 auto;clear:both;text-align:center;
+      }
+      .a5 h3{color:#551A8B;
+            font-family:"微软雅黑";
+            font-weight:bold;
+         margin:600px 0 30px;
+         
+        }
+        .a5 span{font-family:"微软雅黑";}
+/* 底边圆形文字切换 */
+       .img-b1 img:last-child{position:absolute;
+          left:8px;top:8px;display:none;}
+
+        .a7{border:0px solid blue;
+           width:1300px;margin:0 auto;}
+        .img-b1{border:0px solid red;position:relative;
+               padding:8px;margin-top:130px;}
+        .img-b1:first-child{margin-left:550px;}
+        .img-b1:last-child{margin:210px -164px 100px;}
+        .img-b1:hover img:last-child{display:block;}
+/* 底部文字 */
+       .a8{border-top:2px solid #666666;clear:both;
+        width:1000px;margin:0 auto;font-family:"微软雅黑";}
+        .a9{float:left;margin:50px 0 50px 30px;}
+        .a10{float:right;margin:50px 30px 50px 0;}
+        </style>
+    </head>
+    <body>
+<!-- 导航 -->
+     <div class="header">
+     	<div class="auto">
+     		<img class="logo" src="images/applelogo.png">
+     		<div class="nav-box">
+     			<a href="#">在线商店</a>
+     			<ul>
+     				<li><a href="#">了解更多</a></li>
+     				<li><a href="#">继续查看</a></li>
+     				<li><a href="#">商业用途</a></li>
+     			</ul>
+     		</div>
+     		<div class="nav-box">
+     			<a href="#">MAC</a>
+     			<ul>
+     				<li><a href="#">首页</a></li>
+     				<li><a href="#">次页</a></li>
+     				<li><a href="#">尾页</a></li>
+     			</ul>
+     		</div>
+     		<div class="nav-box">
+     			<a href="#">iPad</a>
+     			<ul>
+     				<li><a href="#">首页</a></li>
+     				<li><a href="#">次页</a></li>
+     				<li><a href="#">尾页</a></li>
+     			</ul>
+     		</div>
+     		<div class="nav-box">
+     			<a href="#">iPhone</a>
+     			<ul>
+     				<li><a href="#">首页</a></li>
+     				<li><a href="#">次页</a></li>
+     				<li><a href="#">尾页</a></li>
+     			</ul>
+     		</div>
+     		<div class="nav-box">
+     			<a href="#">Watch</a>
+     			<ul>
+     				<li><a href="#">首页</a></li>
+     				<li><a href="#">次页</a></li>
+     				<li><a href="#">尾页</a></li>
+     			</ul>
+     		</div>
+     		<div class="nav-box">
+     			<a href="#">Music</a>
+     			<ul>
+     				<li><a href="#">首页</a></li>
+     				<li><a href="#">次页</a></li>
+     				<li><a href="#">尾页</a></li>
+     			</ul>
+     		</div>
+     		<div class="nav-box">
+     			<a href="#">技术支持</a>
+     			<ul>
+     				<li><a href="#">首页</a></li>
+     				<li><a href="#">次页</a></li>
+     				<li><a href="#">尾页</a></li>
+     			</ul>
+     		</div>
+     	</div>
+     </div>
+<!-- banner -->
+     <div class="banner">
+     	<img src="images/ipad4_03.png" height="601" width="1300">
+     	<span class="btns left-btn"><!-- &lt; <--><img src="images/leftjiantou1.png"></--></span>
+     	<span class="btns right-btn"><!-- &gt; <--><img src="images/rightjiantou1.png"></--></span>
+      <div class="points">
+      	<span></span>
+      	<span></span>
+      	<span></span>
+      	<span></span>
+      </div>
+     </div>
+<!-- 插入圆形图片 -->
+     <div class="a1">
+         <div class="a3 b1">
+             <img src="images/smallbanner1_03.png">
+             <h3><a href="#">Gold iPhone</a></h3>
+             <span>Company Background:Apple Computer Lnc,was founded in 1976 ,isheadqusrte red in California Qiupodinuo City ,in the heart of silicon Valley。</span>
+         </div>
+         <div class="a3 b2">
+             <img src="images/smallbanner2_03.png">
+             <h3><a href="#">NEW iPhone</a></h3>
+             <span>Company Background:Apple Computer Lnc,was founded in 1976 ,isheadqusrte red in California Qiupodinuo City ,in the heart of silicon Valley。</span>
+         </div>
+         <div class="a3 b3">
+             <img src="images/smallbanner3_03.png">
+             <h3><a href="#">Black iPhone</a></h3>
+             <span>Company Background:Apple Computer Lnc,was founded in 1976 ,isheadqusrte red in California Qiupodinuo City ,in the heart of silicon Valley。</span>
+         </div>
+     </div>
+<!-- 图片的切换 -->
+     <div class="auto a2">
+        <div class="left img-box">
+     	  <img src="images/2-1_02.png">
+     	  <img src="images/1-1_02.png">
+        </div>
+        <div class="left img-box">
+     	  <img src="images/2-2_03.png">
+     	  <img src="images/1-2_03.png">
+        </div>
+        <div class="left img-box">
+     	  <img src="images/2-3_03.png">
+     	  <img src="images/1-3_03.png">
+        </div>
+        <div class="left img-box">
+     	  <img src="images/2-4_02.png">
+     	  <img src="images/1-4_02.png">
+        </div>
+        <div class="left img-box">
+     	  <img src="images/2-5_03.png">
+     	  <img src="images/1-5_03.png">
+        </div>
+        <div class="left img-box">
+     	  <img src="images/2-6_03.png">
+     	  <img src="images/1-6_03.png">
+        </div>
+
+     </div> 
+<!-- 下边字体 -->
+     <div class="a5">
+         <h3><a href="#">iPhone change the world</a></h3>
+         <span>
+             Company Background:Apple Computer Lnc,was founded in 1976 ,isheadqusrte red in California Qiupodinuo City ,in the heart of nbsp;silicon Valley。 Company Background:Apple Computer Lnc,was founded in 1976 ,
+      isheadqusrte red in California Qiupodinuo City ,in the heart of silicon Valley。 Company Background:
+      Apple Computer Lnc,was founded in 1976 ,isheadqusrte red in California Qiupodinuo City ,in the heart of silicon Valley。
+         </span>
+     </div>
+<!-- 底边圆形图片切换 -->
+     <div class="a7">
+         <div class="left img-b1">
+            <img src="images/4_052.png"> 
+            <img src="images/8_05.png"> 
+         </div>
+         <div class="left img-b1">
+            <img src="images/3_05.png"> 
+            <img src="images/6_05.png"> 
+         </div>
+         <div class="left img-b1">
+            <img src="images/4_05.png"> 
+            <img src="images/5_05.png"> 
+         </div>
+         <div class="left img-b1">
+            <img src="images/3_052.png"> 
+            <img src="images/7_05.png"> 
+         </div>
+     </div>
+<!-- 底部文字 -->
+    <div class="a8">
+        <div class="a9"> 版权所有©2015 中国苹果有限公司 粤AX-20045634005号  </div>
+        <div class="a10">法律声明丨隐私保护丨联系我们丨网站地图</div>
+    </div>
+    </body>
+</html>
